@@ -1,0 +1,481 @@
+<!DOCTYPE html>
+<!--
+Created using JS Bin
+http://jsbin.com
+
+Copyright (c) 2018 by chirovan5231 (http://jsbin.com/zaneyab/1/edit)
+
+Released under the MIT license: http://jsbin.mit-license.org
+-->
+<meta name="robots" content="noindex">
+<html>
+<head>
+<meta name="description" content="[INFORMATICA 15.02.2018-locurile frumoase din Romania-SAPANTA]">
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <title>JS Bin</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+
+
+
+
+<style id="jsbin-css">
+/* ==== A SIMPLE CSS RESET FROM ERIC MEYER ==== */
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+/* ==== HELPER COLORS FOR LAYOUT ==== */
+
+/*.main-header {
+  background-color: rgba(255, 248, 53, .3);
+}
+
+.primary-content {
+  background-color: rgba(140, 96, 255, .3);
+}
+
+.post {
+  background-color: rgba(255, 0, 0, .3);
+}*/
+
+/* ==== BASE STYLES ==== */
+
+* {
+	box-sizing: border-box;
+}
+
+body {
+  font-family: Merriweather, 'Times New Roman', serif;
+  font-size: 1.125rem;
+  line-height: 2rem;
+  color: #333;
+}
+
+h1,
+h2 {
+  font-family: 'Open Sans', Arial, sans-serif;
+}
+
+h1 {
+	font-size: 1.8rem;
+}
+
+h2 {
+	font-size: 1.6rem;
+	color: #e5127d;
+}
+h3 {
+	font-size: 0.95rem;
+	color: #e5127d;
+letter-spacing: 0.12rem;
+line-height: 18px;
+}
+.main-header p {
+	font-size: 1.125rem;
+	letter-spacing: 0.125rem;
+	color: #8c8e9b;
+}
+
+a {
+	color: #e5127d;
+	text-decoration: none;
+}
+
+a:hover {
+	color: #b60e63;
+}
+
+/* ==== LAYOUT STYLES ==== */
+
+h1,h2,h3,h4,h5,h6,hgroup,
+ul,ol,dd,
+p,figure, img,
+pre,table,fieldset,hr,
+.main-header, .primary-content {
+    margin-bottom: 1rem;
+}
+ 
+
+/* Main Header Styles */
+.main-header {
+	text-align: center;
+	padding: 1.25rem;
+	color: #fff;
+	background-color: #42444e;
+}
+/*antetul să fie afișat în partea stângă, să ocupe o treime din ecran și să stea
+pe loc când derulăm în jos pe pagină LAYOTUL PENTRU TABLETA */
+@media (min-width: 768px) {
+
+			.main-header {
+					position: fixed;
+					top: 0;
+					height: 100%;
+					width: 33.3%;
+				}
+
+		}
+	
+/* Primary Content Wrapper Styles */
+
+@media (min-width: 768px) {
+
+	.primary-content {
+		float: right;
+		width: 66.6%;
+		max-width: 812px;
+	}
+
+  /*LAYOTUL PENTRU DESKTOP */
+  @media (min-width: 1025px) {
+
+	.main-header {
+		width: 25.625%;
+	}
+
+}
+  @media (min-width: 1025px) {
+
+	.primary-content {
+	float: none;
+	position: absolute;
+        left: 25.625%;
+			}
+
+		}
+	
+  
+  
+  }
+  
+@media (min-width: 48rem) {
+	.primary-content {
+		float: right;
+		width: 10.6%;
+		max-width: 812px;
+	}
+
+}
+
+
+@media (min-width: 20rem) {
+
+  .body {
+    display: inline-block;
+    border-bottom: none;
+    width: 7.5rem;
+  }}
+ @media (min-width: 30rem) {
+
+  .body {
+    display: inline-block;
+    border-bottom: none;
+    width: 7.5rem;
+  }}
+@media (min-width: 62rem) {
+
+  .body {
+    display: inline-block;
+    border-bottom: none;
+    width: 7.5rem;
+  }}
+
+@media (min-width: 64rem) {
+
+	.body {
+		float: none;
+		position: absolute;
+        left: 20.625%;
+	}
+
+}
+ @media (min-width: 75rem) {
+
+  .body {
+    display: inline-block;
+    border-bottom: none;
+    width: 7.5rem;
+  }}
+
+ 
+ 
+
+/* ==== COMPONENT STYLES ==== */
+
+.button {
+	display: inline-block;
+	border: 1px solid #8c8e9b;
+	color: #8c8e9b;
+	border-radius: 10px;
+	padding-right: 5px;
+	padding-left: 5px;
+	margin: 5px;
+	width: 100px;
+	font-family: 'Open Sans', sans-serif;
+}
+ 
+@media (în cazul în care condiția este adevărată) {
+
+	aplică aceste stiluri
+
+}
+.button:hover {
+	border: 1px solid #b60e63;
+}
+
+.load {
+	display: block;
+	text-align: center;
+	padding: 0.625rem;
+	font-size: 1.25rem;
+	color: #8c8e9b;
+	cursor: pointer;
+}
+/* Base Styles */
+
+		aside,
+		section {
+			margin-right: 1.096%;
+		}
+
+		.container {
+			width: 95vw;
+			height: 50.13vh;
+			padding: 1.096%;
+		}
+
+		aside {
+			width: 33.3%;
+			height: 100%;
+			float: left;
+		}
+
+		section {
+			width: 33.3%;
+			height: 100%;
+			float: left;
+		}
+
+		@media (max-width: 420px) {
+
+			/* Demonstrational Styles */
+
+			aside,
+			section {
+				height: 48%;
+				margin-bottom: 1.096%;
+			}
+
+			/* Layout Styles */
+
+			aside,
+			section {
+				float: none;
+				width: auto;
+			}
+
+		}
+	
+
+
+
+                          /*--patratele--*/
+
+#dateContact {
+  width: 400px;
+  height: 450px;
+    margin: 50 auto;
+  box-shadow: 15px 15px 40px magenta;
+   margin-right: 30px;
+   margin-top: 80px;
+   margin-bottom:80px;
+}
+/*se lasa spatiu probabil -rectifica apoi informatia -FRATE */
+
+ 
+.orange {
+  background-color: orange;
+}
+.linear-gradient {
+  background: linear-gradient(to right,
+      red, orange, yellow, green, blue, indigo, violet);
+}
+
+/*se muta la dreapta Patratul ROSU sau un patrat */
+.right {
+  float: right;
+}
+.left {
+  float: left;
+}
+
+p {text-align: bottom;
+  padding: 5rem;
+  font-family: 'Arial', sans-serif;
+  font-size: 1.5rem;
+  padding: 0 .625rem;
+  color: rgba(255,10,17,.9);
+  text-align: center;
+}
+h1,h2 {text-align: center;
+color: rgba(200,0,255,.9);
+}
+ /* Fading animation */
+.fade {
+  -webkit-animation-name: fade;
+  -webkit-animation-duration: 1.5s;
+  animation-name: fade;
+  animation-duration: 1.5s;
+}
+
+@-webkit-keyframes fade {
+  from {opacity: .4} 
+  to {opacity: 1}
+}
+
+@keyframes fade {
+  from {opacity: .4} 
+  to {opacity: 1}
+}
+ img {
+  margin-bottom: 100px;
+  width: 405px;
+  height: 380px;
+  border-radius: 10px / 20px;
+  padding: 10px;
+  
+  
+}
+
+
+
+</style>
+</head>
+<body>
+
+<!--CONTOR VIZITATORI-->
+
+<script id="_waun16">var _wau = _wau || []; _wau.push(["tab", "60l9mbq2ss", "n16", "left-middle"]);</script><script async src="https://waust.at/t.js"></script>
+
+<header class="main-header">
+    <h1>Documentar despre locurile frumoase din Romania</h1>
+		<p> by Chirovan Mihai  </p>
+<p>C.N.N.B. Braila</p>
+<p> 15.02.2018 </p> 
+                 
+		<a href="https://mihai5231.github.io/BISERICA-NEAGRA/" class="button">HOME</a>
+		<a href="https://mihai5231.github.io/PRAID/" class="button">NEXT</a>
+                 
+  </header>
+
+ 
+
+<div id="dateContact" class="right orange">
+ 
+<h2> Cimitirul Vesel din Sapanta este faimos pentru crucile mormintelor desenate in asa fel incat sa interpreteze viata acelor oameni.  
+   Acest cimitir este des vizitat de oameni , pentru ca aici e ca si cum   te-ai duce la o comedie. </h2>
+
+<p><i class="material-icons" style="font-size:88px;color:red;">cloud</i>
+<i class="material-icons" style="font-size:60px;color:lightblue;text-shadow:15px 25px 25px #000000;">cloud</i> </p>
+
+     </div>
+
+<div id="dateContact" class="right orange">
+<h1> Cimitirul Vesel -Localitatea Sapanta <h1>
+<img src="https://www.ghiduri-turistice.info/data_files/galerie-foto-articol/7522/large_foto-articol-7522.jpg" alt="foto1">
+
+ </div>
+
+<div id="dateContact" class="right orange">
+  <h2>  Toate crucile sunt din lemn de stejar, care formeaza un muzeu natural. 
+
+<p><i class="material-icons" style="font-size:88px;color:red;">cloud</i>
+<i class="material-icons" style="font-size:60px;color:lightblue;text-shadow:15px 25px 25px #000000;">cloud</i> </p>
+
+ </h2> 
+ </div>
+
+<div id="dateContact" class="right orange">
+<h1> Cimitirul Vesel -Localitatea Sapanta <h1>
+<img src="http://www.turistintransilvania.com/wp-content/uploads/2016/03/cimitirul-vesel-sapanta-foto-adrian-petrisor.jpg" alt="foto1">
+
+ </div>
+
+
+<marquee bgcolor="GoldenRod ">Documentar despre locurile frumoase din Romania</marquee> 
+ </div>
+<div id="dateContact" class="right orange">
+  <h2> Pe cruci , pe partea din fata este interpretata viata omului respectiv , iar pe spatele crucii motivul mortii lui . 
+<p><i class="material-icons" style="font-size:88px;color:red;">cloud</i>
+<i class="material-icons" style="font-size:60px;color:lightblue;text-shadow:15px 25px 25px #000000;">cloud</i> </p>
+
+
+ </h2> 
+ </div>
+<div id="dateContact" class="right orange">
+<h1> Cimitirul Vesel -Localitatea Sapanta <h1>
+<img src="https://upload.wikimedia.org/wikipedia/commons/a/ac/Cimitirul_Vesel_de_la_Sapanta3.jpg" alt="foto1">
+
+ </div>
+<div id="dateContact" class="right orange">
+  <h3>      Cimitirul Vesel este un cimitir din localitatea Săpânța, județul Maramureș, faimos pentru crucile mormintelor viu colorate și picturile naive reprezentând scene din viața și ocupația persoanelor înhumate. Pe unele cruci există chiar versuri în care sunt amintite, deseori cu nuanțe umoristice, persoanele respective.
+Ineditul acestui cimitir este diferențierea față de cultura populară, care consideră moartea ca un eveniment trist. S-a făcut ipoteza că Stan Ioan Pătraș s-ar fi inspirat din cultura dacilor, despre care, de la Ovid Densușianu încoace, se predă că socoteau moartea ca un eveniment vesel. Din 1935 datează primul epitaf, iar din anii 1960 încoace, întreg cimitirul a fost populat cu circa 800 astfel de cruci, sculptate din lemn de stejar, devenind un muzeu în aer liber de natură unică și o atracție turistică.
+Din anul 2009, cimitirul este obiectivul festivalului anual „Drumul Lung spre Cimitirul Vesel”.[1]
+Unele cruci sunt pictate pe ambele părți. Pe o parte este plasată o descriere a vieții celui îngropat, iar pe cealaltă — o descriere a motivului morții. Majoritatea crucilor sunt scrise cu greșeli de ortografie și variante arhaice de scriere.
+  </h3> 
+ </div>
+<div id="dateContact" class="right orange">
+<h1> Cimitirul Vesel -Localitatea Sapanta <h1>
+<img src="http://travelblog.md/wp-content/uploads/2014/08/sapanta-maramures-travelblog-moldova-22.jpg" alt="foto1">
+
+ </div>
+<iframe src="https://www.google.com/maps/embed?pb=!1m23!1m12!1m3!1d1367797.5472320921!2d22.569866058405665!3d47.96578676943119!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!4m8!3e6!4m0!4m5!1s0x4737965af863a507%3A0x5b864165db0c8322!2zU8SDcMOibsibYSA0MzczMDU!3m2!1d47.974164599999995!2d23.6977808!5e0!3m2!1sro!2sro!4v1517746195099" width="1250" height="450" frameborder="0" style="border:0" allowfullscreen></iframe>
+
+
+
+
+</body>
+</html>
